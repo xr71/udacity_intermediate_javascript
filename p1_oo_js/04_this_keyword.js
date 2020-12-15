@@ -16,3 +16,46 @@
  */
 
 
+const mockingbird =
+{
+  title: 'To Kill a Mocking Bird',
+  describe: function()
+  {
+    console.log(`${this.title} is a good book!`);
+  }
+}
+
+mockingbird.describe();
+
+const pride =
+{
+  title: 'Pride and Prejudice'
+}
+
+mockingbird.describe.call(pride);
+
+
+function sayHello(message) 
+{
+  console.log(`${message}, ${this.name}. You're looking well today.`);
+}
+
+name = "a global window name";
+sayHello("hello");
+
+sayHello.apply({name: "a local name"}, [ 'hello' ]);
+sayHello.call({name: "a local name in call method"}, 'hello');
+
+
+const andrew =
+{
+  name: "Andrew"  
+}
+
+function introduce(language)
+{
+  console.log(`I'm  ${this.name} and my favoriate language is ${language}.`);
+}
+
+introduce.call(andrew, 'java');
+
