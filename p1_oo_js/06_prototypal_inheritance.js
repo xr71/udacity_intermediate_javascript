@@ -42,6 +42,8 @@ Dog.prototype.greet = function() {
 console.log(Object.getPrototypeOf(dog1));
 console.log(dog1.color);
 
+
+console.log("logging dog2");
 let dog2 = new Dog('Python', 50, 3);
 console.log(dog2);
 console.log(Object.getPrototypeOf(dog2));
